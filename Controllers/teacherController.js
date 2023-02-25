@@ -1,7 +1,12 @@
 
 const mongoose=require("mongoose");
+// const bcrypt = require('bcryptjs')
+
 require("./../Model/teacherModel");
 
+  // Hash password
+// const salt = await bcrypt.genSalt(10)
+// const hashedPassword = await bcrypt.hash(password, salt)
 
 const TeacherSchema=mongoose.model("teachers");
     exports.getAllTeacher=(request,response,next)=>{

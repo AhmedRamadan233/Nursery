@@ -14,7 +14,7 @@ module.exports = (request, response, next) => {
     }
     next();
 }
-// Check Admin 
+// Check Admin
 module.exports.checkAdmin = (request, response, next) => {
     if (request.role == "admin") {
         next()
@@ -25,7 +25,7 @@ module.exports.checkAdmin = (request, response, next) => {
         next(error);
     }
 }
-//  Check Teacher 
+//  Check Teacher
 module.exports.checkTeacher = (request, response, next) => {
     if (request.role == "teachers") {
         next()
