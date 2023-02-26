@@ -5,8 +5,6 @@ require("./../Model/teacherModel");
 require("./../Model/childModel");
 
 
-
-
 const ClassesSchema=mongoose.model("classes");
 const ChildrenSchema=mongoose.model("children");
 const TeacherSchema=mongoose.model("teachers");
@@ -24,27 +22,6 @@ exports.getAllClass=(request,response,next)=>{
     }
 
     exports.addClass= async(request,response,next)=>{
-
-
-
-
-        
-        // const makeModuleAndBatteryPromises = async() => {
-
-        //     const promises = arrayOfObjects.map(async obj => {
-        //         let teacher=await TeacherSchema.findOne({_id:request.body.supervisor},{_id:1});
-        //         let child=await ChildrenSchema.find({_id:{$in:request.body.children}});
-        //         return assignAssets(child);
-        //     });
-        
-        //     const res = await Promise.all(promises);
-        //     const finalValue = res.at(-1); // or res[res.length-1];
-        //     // do things with finalValue
-        // }
-        // makeModuleAndBatteryPromises()
-
-
-
 
         // try{
         //     let teacher=await TeacherSchema.findOne({_id:request.body.supervisor},{_id:1});
@@ -130,56 +107,3 @@ exports.getAllClass=(request,response,next)=>{
             next(error);
         })
     }
-
-
-
-
-
-
-    // _id:request.body.id,
-    //                 name:request.body.name,
-    //                 supervisor:request.body.supervisor,
-    //                 children:request.body.children,
-
-
-
-
-
-
-
-    //  TeacherSchema.findOne({_id:request.body.supervisor},{_id:1})
-
-        // .then(data=>{
-        //     if(data==null)
-        //     {
-        //         console.log("ana f error bta3 el suberva")
-        //         next(new Error("Teachufuguyjyvjer not Found"))
-        //     }else{
-        //         return new ClassesSchema({
-        //             _id:request.body.id,
-        //             name:request.body.name,
-        //             supervisor:request.body.supervisor,
-        //             children:request.body.children,
-        //         }).save()  //insertOne
-        //     }
-        // }).catch(error=>next(error))
-
-        // ChildrenSchema.find({_id:{$in:request.body.children}})
-        // .then(data=>{
-        //     if(data.length != request.body.children.length)
-        //     {
-        //         console.log("ana f error bta3 el child")
-        //         next(new Error("Child not Found"))
-        //     }
-        // })
-
-        //     .then(data=>{
-        //         console.log("then data")
-
-        //         response.status(201).json({data});
-        //     })
-
-
-
-
-
