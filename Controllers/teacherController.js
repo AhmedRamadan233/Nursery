@@ -7,7 +7,6 @@ require("./../Model/teacherModel");
 // Hash password
 // const salt = await bcrypt.genSalt(10)
 // const hashedPassword = await bcrypt.hash(password, salt)
-
 const TeacherSchema=mongoose.model("teachers");
     exports.getAllTeacher=(request,response,next)=>{
         // console.log(request);
@@ -19,7 +18,6 @@ const TeacherSchema=mongoose.model("teachers");
             next(error);
         })
     }
-
     exports.addTeacher=(request,response,next)=>{
         console.log(request.file)
 
@@ -36,7 +34,6 @@ const TeacherSchema=mongoose.model("teachers");
        })
        .catch(error=>next(error))
     }
-
     exports.updateTeacher=(request,response,next)=>{
         TeacherSchema.updateOne({
             _id:request.body.id
